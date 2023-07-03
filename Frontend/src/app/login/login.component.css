@@ -1,0 +1,362 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: #f5f5f5;
+  height: 500px;
+}
+.container {
+  background-color: #dcfef0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 500px;
+  width: 600px;
+  position: relative;
+
+  transition: transform 0.5s ease;
+  right: 200px;
+}
+
+.container:hover {
+  transform: translateY(-40px);
+}
+
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.form-control.invalid {
+  border-color: #f1fb92;
+}
+
+.alert {
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.btn-success {
+  background-color: #00b894;
+}
+
+.btn-danger {
+  background-color: #e74c3c;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #00b894;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background-color: #55efc4;
+  transform: skewX(-30deg);
+  transition: transform 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  z-index: -1;
+}
+
+.btn:before {
+  transform: skewX(-40deg);
+}
+
+.btn:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -50%;
+  width: 50%;
+  height: 100%;
+  background-color: #55efc4;
+  transform: skewX(30deg);
+  transition: transform 0.1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  z-index: -1;
+}
+
+.btn:hover:after {
+  transform: skewX(40deg);
+}
+
+
+.invalid-credentials {
+  text-align: center;
+  color: #fafa5b;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.inner-table{
+  display: flex;
+  position: relative;
+  bottom: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* LOGIN-BTN */
+
+
+.body {
+  font-family: 'Lato', sans-serif;
+}
+
+.wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.link_wrapper {
+  position: relative;
+}
+
+.btnann {
+  display: block;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #333;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #333;
+  transition: all .35s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btnann:hover {
+  width: 200px;
+  border: 3px solid #2ecc71;
+  background: transparent;
+  color: #ffffff;
+}
+
+.btnann:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background-color: #2ecc71;
+  transition: all .35s;
+  z-index: -1;
+}
+
+.btnann:hover:before {
+  width: 100%;
+}
+
+.btnann:after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  border: 3px solid transparent;
+  border-top-color: #2ecc71;
+  border-left-color: #2ecc71;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: all .35s;
+  z-index: -1;
+}
+
+.btnann:hover:after {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+
+
+
+/* cancel */
+
+
+.body {
+  font-family: 'Lato', sans-serif;
+}
+
+.wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.link_wrapper {
+  position: relative;
+}
+
+.btnCan {
+  display: block;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #333;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #333;
+  transition: all .35s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btnCan:hover {
+  width: 200px;
+  border: 3px solid #2ecc71;
+  background: transparent;
+  color: #ffffff;
+}
+
+.btnCan:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background-color: #cc2e2e;
+  transition: all .35s;
+  z-index: -1;
+}
+
+.btnCan:hover:before {
+  width: 100%;
+}
+
+.btnCan:after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  border: 3px solid transparent;
+ 
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: all .35s;
+  z-index: -1;
+}
+
+.btnCan:hover:after {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+
+
+/* media query  */
+
+
+body {
+  background-image: url('../../assets/images/portrait-smiling-medical-worker-girl-doctor-white-coat-with-stethoscope-pointing-fingers-left.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  backdrop-filter: blur(5px);
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(5px); /* For Safari */
+}
+
+/* Responsive styles for mobile view */
+@media (max-width: 767px) {
+  /* Adjust margin and padding of the form container */
+  .container {
+    margin-top: 0;
+    padding-top: 100px;
+    margin-bottom: 200px;
+  }
+
+  /* Adjust margin of the inner table */
+  .inner-table {
+    margin-top: 50px;
+  }
+}
+
+/* Responsive styles for desktop view */
+@media (min-width: 768px) {
+  /* Adjust margin and padding of the form container */
+  .container {
+    margin-top: 0;
+    padding-top: 400px;
+    margin-bottom: 500px;
+  }
+
+  /* Adjust margin of the inner table */
+  .inner-table {
+    margin-top: 150px;
+  }
+}

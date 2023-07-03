@@ -1,0 +1,285 @@
+/* Form Animation */
+@keyframes formAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .container {
+    margin-top: 100px;
+  }
+  
+  form {
+    animation: formAnimation 0.5s ease-in-out;
+  }
+  
+  table {
+    width: 80%;
+  }
+  
+  td {
+    padding: 10px;
+  }
+  
+  label {
+    display:ruby-base;
+    font-weight: bold;
+  }
+  
+  .input-error {
+    display: block;
+    color: red;
+    font-size: 0.8em;
+    margin-top: 5px;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+  
+  /* Additional Styles for Visual Enhancement */
+  .form-control {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .btn-success {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .btn-success:hover {
+    background-color: #218838;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+  }
+  
+
+
+
+  /* Additional Styles for Visual Enhancement */
+.form-control {
+    width: 40%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #ebeeee; /* Change the background color here */
+  }
+  
+  /* Optional: Change the background color on focus */
+  .form-control:focus {
+    background-color: #e0e0e0; /* Change the background color here */
+  }
+  
+
+  .animated-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.animated-button:hover {
+  transform: scale(1.1);
+}
+
+.animated-button:active {
+  animation: button-pulse 0.3s;
+}
+
+
+
+/* registerBtn */
+/* Common styles for both buttons */
+.body {
+  font-family: 'Lato', sans-serif;
+}
+
+.wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.link_wrapper {
+  position: relative;
+}
+
+/* Registration Button */
+.btnReg {
+  display: block;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #333;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #333;
+  transition: all .35s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btnReg:hover {
+  width: 200px;
+  border: 3px solid #fb2a2a;
+  background: transparent;
+  color: #ffffff;
+}
+
+.btnReg:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background-color: #2ecc71;
+  transition: all .35s;
+  z-index: -1;
+}
+
+.btnReg:hover:before {
+  width: 100%;
+}
+
+.btnReg:after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: all .35s;
+  z-index: -1;
+}
+
+.btnReg:hover:after {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+/* Login Button */
+.btnann {
+  display: block;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #333;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #333;
+  transition: all .35s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btnann:hover {
+  width: 200px;
+  border: 3px solid #e32323;
+  background: transparent;
+  color: #ffffff;
+}
+
+.btnann:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background-color: #de2c2c;
+  transition: all .35s;
+  z-index: -1;
+}
+
+.btnann:hover:before {
+  width: 100%;
+}
+
+.btnann:after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: all .35s;
+  z-index: -1;
+}
+
+.btnann:hover:after {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+  .btnReg,
+  .btnann {
+    width: 80%;
+    max-width: 250px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .btnReg,
+  .btnann {
+    width: 60%;
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 992px) {
+  .btnReg,
+  .btnann {
+    width: 250px;
+  }
+}
+
+
+
+

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .container {
+      margin-top: 100px;
+      margin-bottom: 200px;
+    }
+
+    .inner-table {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form>
+      <div class="inner-table">
+        <table>
+          <tr>
+            <td><label class="form-control">UserID</label></td>
+            <td>
+              <input class="form-control" 
+                required [min]="1" 
+                type="text" 
+                [(ngModel)]="user.userName"
+                [ngModelOptions]="{standalone: true}"
+                #iname="ngModel"
+                placeholder="Enter your username">
+              <span *ngIf="iname.touched && iname.invalid" class="alert alert-danger">
+                <span *ngIf="iname.errors?.['required']">Id cannot be empty</span>
+                <span *ngIf="iname.errors?.['min']">Should not be less than 1</span> 
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td><label class="form-control">Password</label></td>
+            <td>
+              <input class="form-control" 
+                type="text"
+                required
+                minlength="1"
+                [(ngModel)]="user.password"
+                [ngModelOptions]="{standalone: true}"
+                #iname="ngModel"
+                placeholder="Enter your password">
+              <span *ngIf="iname.touched && iname.invalid" class="alert alert-danger">
+                <span *ngIf="iname.errors?.['required']">Password cannot be empty</span>
+                <span *ngIf="iname.errors?.['minlength']">Password should be at least 20 characters long</span> 
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td><button class="btnann" (click)="addUser()">LogIN</button></td>
+            <td><button class="btnCan">Cancel</button></td>
+          </tr>
+          <tr>
+            <td colspan="2">Don't have an Account</td>
+          </tr>
+          <tr>
+            <td colspan="2"><button class="btn btn-success" (click)="register()">Register</button></td>
+          </tr>
+          <tr>
+            <td colspan="2" *ngIf="toggle">Invalid Credentials</td>
+          </tr>
+        </table>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <style>
+   
+    
+
+    /* Responsive styles for mobile view */
+    @media (max-width: 767px) {
+      /* Adjust margin and padding of the form container */
+      .container {
+        margin-top: 0;
+        padding-top: 100px;
+        margin-bottom: 200px;
+      }
+
+      /* Adjust margin of the inner table */
+      .inner-table {
+        margin-top: 50px;
+      }
+    }
+
+    /* Responsive styles for desktop view */
+    @media (min-width: 768px) {
+      /* Adjust margin and padding of the form container */
+      .container {
+        margin-top: 0;
+        padding-top: 400px;
+        margin-bottom: 500px;
+      }
+
+      /* Adjust margin of the inner table */
+      .inner-table {
+        margin-top: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>
+  <div class="container">
+    <form>
+      <table>
+        <div class="inner-table">
+          <table>
+            <tr>
+              <td><label class="form-control">UserID</label></td>
+              <td>
+                <input class="form-control" 
+                  required [min]="1" 
+                  type="text" 
+                  [(ngModel)]="user.userName"
+                  [ngModelOptions]="{standalone: true}"
+                  #iname="ngModel"
+                  placeholder="Enter your username">
+                <span *ngIf="iname.touched && iname.invalid" class="alert alert-danger">
+                  <span *ngIf="iname.errors?.['required']">Id cannot be empty</span>
+                  <span *ngIf="iname.errors?.['min']">Should not be less than 1</span> 
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><label class="form-control">Password</label></td>
+              <td>
+                <input class="form-control" 
+                  type="text"
+                  required
+                  minlength="1"
+                  [(ngModel)]="user.password"
+                  [ngModelOptions]="{standalone: true}"
+                  #iname="ngModel"
+                  placeholder="Enter your password">
+                <span *ngIf="iname.touched && iname.invalid" class="alert alert-danger">
+                  <span *ngIf="iname.errors?.['required']">Password cannot be empty</span>
+                  <span *ngIf="iname.errors?.['minlength']">Password should be at least 20 characters long</span> 
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><button class="btnann" (click)="addUser()">LogIN</button></td>
+              <td><button class="btnCan">Cancel</button></td>
+            </tr>
+            <tr>
+              <td colspan="2">Don't have an Account</td>
+            </tr>
+            <tr>
+              <td colspan="2"><button class="btn btn-success" (click)="register()">Register</button></td>
+            </tr>
+            <tr>
+              <td colspan="2" *ngIf="toggle">Invalid Credentials</td>
+            </tr>
+          </table>
+        </div>
+      </table>
+    </form>
+  </div>
+</div>
+</body>
+</html> -->
+
+

@@ -1,0 +1,138 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<div class="container-fluid" style="justify-content: center;">
+  <div class="flex">
+    <div class="flex1">
+      <div><img class="logoimg" src="../assets/images/srh-logo-header.png"  alt=""><br></div>
+      <div ><h2>LIFE LINK</h2></div>
+    </div>
+    <div class="flex2">
+      
+      <ul class="nav-links">
+        <li *ngIf="role == 'admin'"><a routerLink="/admin">Admin</a></li>
+        <li><a routerLink="/home">Home</a></li>
+        <li><a *ngIf="role == ''" routerLink="/logIN">Login</a></li>
+        <li *ngIf="role == 'doctor'"><a routerLink="staff">Profile</a></li>
+        <li *ngIf="role !== ''"><a routerLink="main">Main</a></li>
+        <li><a *ngIf="role !== ''" (click)="logOutPage()" class=".lgout">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+ 
+
+   
+  </div>
+  <router-outlet />
+<!-- <div>
+  <div class="imgAKKA"><img src="../assets/images/hero.webp" id="animatedImage1" class="animg" width="" alt=""></div>
+
+
+
+</div>
+
+
+<div style="display: flex; position: relative; top: 500px; "><img
+    src="../assets/images/Screenshot 2023-06-30 174704.png  " width="100%" alt=""></div>
+
+
+<div class="abt"
+  style="width: 350px; height: 350px; background-color: rgb(201, 238, 254); display: flex; position:relative; bottom: 700px;left: 50px; align-items: center; justify-content: center;">
+  <strong>WELCOME</strong>
+</div>
+
+
+
+
+<div style="position:relative;top: 200px;">
+  <h2>FOUNDER</h2>
+  <B>DR MARAN</B>
+
+
+</div>
+
+
+
+<div class="row row-cols-1 row-cols-lg-4 g-2 g-lg-3 justify-content-evenly  diff" style="margin-top:250px;">
+
+  <div class="card-border-0">
+    <img src="../assets/images/hrt-wr-001.png" class="card-img-top" alt="Card Image">
+    <div class="card-body">
+
+    </div>
+  </div>
+  <div class="card-border-01">
+    <img src=".././assets/images/download.jpeg" class="card-img-top" alt="Card Image">
+    <div class="card-body">
+
+    </div>
+  </div>
+  <div class="card-border-0">
+    <img src="../assets/images/heartProt.png" class="card-img-top" alt="Card Image">
+    <div class="card-body">
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="container" style="margin-top: 200px;">
+  <div class="row">
+    <div class="col-md-4">
+      <h4 style=""> BEST HEART RELATED TREATMENT</h4>
+      <p style="margin-left: -35px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="col-md-4  mov">
+      <img src="../assets/images/cpro.png " width="400px" alt="Image" style="">
+    </div>
+    <div class="col-md-4">
+      <h4>Third Column</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="height: 400px; background-color: white;"></div>
+
+</div> -->
+
+<footer class="footer  " style="background-color: rgb(190, 229, 253);">
+  <div class="container ">
+    <div class="row justify-content-between">
+      <div class="col-2">
+        <h4>About Us</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non maximus neque, at commodo justo. Ut quis
+          volutpat orci.</p>
+      </div>
+      <div class="col-4 ">
+        <h4>Contact Us</h4>
+        <ul class="list-unstyled">
+          <li><i class="fas fa-map-marker-alt"></i> 123 Street, City, Country</li>
+          <li><i class="fas fa-phone"></i> +1 (123) 456-7890</li>
+          <li><i class="fas fa-envelope"></i> info@example.com</li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h4>Follow Us</h4>
+        <ul class="list-unstyled">
+          <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col text-center">
+        <p>&copy; 2023 Hospital Name. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
