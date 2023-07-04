@@ -11,7 +11,13 @@ import { DoctorTableModel } from '../Models/DoctorTable.model';
 })
 export class UserInternService {
 
+  id:number | undefined;
+  name:any;
+
   constructor(private httpClient:HttpClient) {
+    this.id=Number(localStorage.getItem("this.internID"))
+    this.name=localStorage.getItem("name");
+
    }
 
    userlogin(user:UserDTOModel){
@@ -69,5 +75,21 @@ export class UserInternService {
     
         return this.httpClient.get<any>(url, { headers });
     }
+    getDoctorbyname():Observable<any>
+    {
+      https://localhost:7232/api/Doctors/getdotorbyname?name=Banner%40123
+      return this.httpClient.get("https://localhost:7232/api/Doctors/getdotorbyname?name="+this.name);
+    }
+
+    getTimeslot():Observable<any>
+    {
+      return this.httpClient.get("https://localhost:7232/api/TimeSlots");
+
+    }
+    // bookappointment(book:Booking):Observable<any>
+    // {
+    //   return this.httpClient.post("https://localhost:7232/api/Bookings",book);
+
+    // }
 
 }

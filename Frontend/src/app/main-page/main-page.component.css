@@ -59,3 +59,27 @@
 @media screen and (max-width: 479px) {
   #parallax-world-of-ugg .block {padding: 30px 15px; width:290px;}
 }
+
+
+
+
+
+
+@media (max-width: 767px) {
+  #holder {
+    width: 100%;
+    padding: 10px 20px;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .btnTwo {
+    display: none;
+  }
+
+  .btnText2 {
+    display: none;
+  }
+}

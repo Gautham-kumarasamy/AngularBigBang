@@ -154,7 +154,7 @@
 
 .btnReg:hover {
   width: 200px;
-  border: 3px solid #fb2a2a;
+  border: 3px solid #49fb2a;
   background: transparent;
   color: #ffffff;
 }
@@ -216,7 +216,7 @@
 
 .btnann:hover {
   width: 200px;
-  border: 3px solid #e32323;
+  border: 3px solid #e36623;
   background: transparent;
   color: #ffffff;
 }
@@ -255,6 +255,9 @@
   top: 50%;
   transform: translate(-50%, -50%) rotate(0deg);
 }
+
+
+
 
 /* Responsive styles */
 @media (max-width: 767px) {

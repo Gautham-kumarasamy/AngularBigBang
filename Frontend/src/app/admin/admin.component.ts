@@ -4,6 +4,7 @@ import { UserDTOModel } from '../Models/userDTO.model';
 import { Router } from '@angular/router';
 import { UserInternService } from '../Services/user-intern.service';
 import { DoctorModel } from '../Models/Doctor.model';
+import { DoctorTableModel } from '../Models/DoctorTable.model';
 
 @Component({
   selector: 'app-admin',
@@ -18,7 +19,7 @@ export class AdminComponent {
   public deleteStaff:any;
   public remove:any;
   public touser:InternModel;
-  public todoctor:DoctorModel
+  public todoctor:DoctorTableModel
 
 
   constructor(private userInternService:UserInternService,//Injections
@@ -28,7 +29,7 @@ export class AdminComponent {
     this.intern = new InternModel();
     this.userdto=new UserDTOModel();
     this.touser=new InternModel();
-    this.todoctor=new DoctorModel();
+    this.todoctor=new DoctorTableModel();
   }
 
   sendRequest()

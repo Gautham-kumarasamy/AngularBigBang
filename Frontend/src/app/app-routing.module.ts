@@ -15,11 +15,11 @@ const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'register',component:RegisterComponent},
   {path:'logIN',component:LoginComponent},
-  {path:'admin',component:AdminComponent, canActivate:[AuthGuard]},
+  {path:'admin',component:AdminComponent, canActivate:[AuthGuard], data: {roles:['admin']}},
   {path:'home',component:HomeComponent},
   {path:'staff',component:StaffComponent },
-  {path:'main',component:MainPageComponent},
-  {path:'user',component:UserComponent}
+  {path:'main',component:MainPageComponent, },
+  {path:'user',component:UserComponent  }
 
   
 ];

@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <style>
     #video-container {
       position: relative;
       width: 100%;
       height: 500px;
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      padding-bottom: 56.25%;
+      /* 16:9 aspect ratio */
     }
-    
+
     #video-container video {
       position: absolute;
       top: 0;
@@ -17,7 +19,7 @@
       height: 100%;
       object-fit: cover;
     }
-    
+
     #overlay-content {
       position: absolute;
       top: 50%;
@@ -28,17 +30,18 @@
     }
   </style>
 </head>
+
 <body>
   <div id="video-container">
     <video autoplay loop muted>
       <source src="../../assets/images/_import_605f1c356bef68.10152882_FPpreview.mp4" type="video/mp4">
     </video>
     <div id="overlay-content">
-      <h1 style="font-size: 100PX;">WORLD CLASS DOCTORS FOR YOU!!</h1>
-      <p>HEALTH IS WEALTH</p>
+      <!-- <h1 style="font-size: 100PX;">WORLD CLASS DOCTORS FOR YOU!!</h1>
+      <p>HEALTH IS WEALTH</p> -->
     </div>
   </div>
-<!-- 
+  <!-- 
   <div class="card-container">
     <div class="card" *ngFor="let b of doctor">
         <img class="card-img-top" src="../../assets/images/{{b.name}}.png" alt="User Image">
@@ -56,21 +59,19 @@
             </div>
         </div>
     </div> -->
-    <div class="cardd">    <div class="card" *ngFor="let b of doctor">
-        <img src="../../assets/images/{{b.name}}.png" alt="John" style="width:100%">
-        <h3>{{ b.name }}</h3>
-    <p><strong>Email:</strong> {{ b.email }}</p>
-    <p><strong>User Name:</strong> {{ b.userName }}</p>
-    <p><strong>Gender:</strong> {{ b.gender }}</p>
-    <p><strong>Specialization:</strong> {{ b.specialization }}</p>
-    <p><strong>Experience:</strong> {{ b.experiance }}</p>
-  </div>
-
+    <div class="cardd" style="justify-content: space-between; background-color:whitesmoke" >
+      <div class="card" *ngFor="let b of doctor">
+          <img src="../../assets/images/{{b.name}}.png" alt="John" class="card img">
+          <h3>{{ b.name }}</h3>
+          <p><strong>EMAIL:</strong> {{ b.email }}</p>
+          <!-- <p><strong>User Name:</strong> {{ b.userName }}</p> -->
+          <p><strong>GENDER:</strong> {{ b.gender }}</p>
+          <p><strong>SPECIALIZATION:</strong> {{ b.specialization }}</p>
+          <p><strong>EXPERIENCE:</strong> {{ b.experience }}</p>
       </div>
+  </div>
 
 </body>
 
 
 </html>
-
-
